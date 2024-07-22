@@ -3,6 +3,21 @@ import "./Widget.scss"
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 const Widget = ({type}) => {
+    let data;
+    switch(type)
+    {
+        case "user":
+            data={
+                title:"USERS",
+                isMoney:false,
+                link:"See all users",
+                icon:
+                    <PersonOutlineOutlinedIcon className="icon" />,
+            };
+            break;
+       default:
+        break;     
+    }
   return (
     <div>
       <div className="widget">
